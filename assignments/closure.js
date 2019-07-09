@@ -1,6 +1,28 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function grandparent() {
+  let grandparentMessage = "the grandparent";
+  console.log(`I'm the outside function and I can see ${grandparentMessage}.`);
+
+  function parent() {
+    let parentMessage = 'the parent';
+    console.log(`I'm the middle function and I can see ${grandparentMessage} and ${parentMessage}.`);
+
+    function child() {
+      let childMessage = 'the child';
+      console.log(`I'm the innermost function and I can see ${grandparentMessage}, ${parentMessage}, and ${childMessage}.`)
+    }
+    child();
+  }
+  parent();
+}
+grandparent();
+
+
+
+
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
